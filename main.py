@@ -1,3 +1,5 @@
+import sys, os
+sys.path.insert(0, os.getcwd())
 from drafter import *
 from bakery import assert_equal
 from lewis_structures import *
@@ -9,7 +11,7 @@ set_site_information(
     author="Ella Shaak",
     description="Learning model to create chemical molecules",
     sources="",
-    planning=["CS1 Final Project 1_ Design.pdf", "Copy of CS1 Final Project 0_ Pick a Problem (1).pdf"],
+    planning=["design.pdf", "brainstorming.pdf"],
     links=[]
 )
 hide_debug_information()
