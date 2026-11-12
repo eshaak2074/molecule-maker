@@ -1,0 +1,16 @@
+three_d = ["three_d_structures/dinitrogen_three_d.png",
+         "three_d_structures/ammonia_three_d.png",
+         "three_d_structures/nitric_oxide_three_d.png",
+         "three_d_structures/cyanonitrene_radical_three_d.png",
+         "three_d_structures/nitrogen_trifluoride_three_d.png",
+         "three_d_structures/dihydrogen_three_d.png",
+         "three_d_structures/water_three_d.png",
+         "three_d_structures/methane_three_d.png",
+         "three_d_structures/hydrogen_fluoride_three_d.png",
+         "three_d_structures/dioxygen_three_d.png",
+         "three_d_structures/carbon_dioxide_three_d.png",
+         "three_d_structures/oxygen_difluoride_three_d.png",
+         "three_d_structures/dicarbon_three_d.png",
+         "three_d_structures/carbon_tetrafluoride_three_d.png",
+         "three_d_structures/difluorine_three_d.png"
+         ]
