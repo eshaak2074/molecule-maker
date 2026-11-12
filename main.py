@@ -1,4 +1,5 @@
 from drafter import *
+from bakery import assert_equal
 from lewis_structures import *
 from three_d_structures import *
 from dataclasses import dataclass
