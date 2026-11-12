@@ -1,5 +1,7 @@
 from drafter import *
 from bakery import assert_equal
+import sys, os
+sys.path.insert(0, os.getcwd())
 from lewis_structures import *
 from three_d_structures import *
 from dataclasses import dataclass
