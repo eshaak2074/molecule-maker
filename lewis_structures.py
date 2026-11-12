@@ -1,0 +1,16 @@
+lewis = ["lewis_structures/dinitrogen_lewis_structure.png",
+         "lewis_structures/ammonia_lewis_structure.png",
+         "lewis_structures/nitric_oxide_lewis_structure.png",
+         "lewis_structures/cyanonitrene_radical_lewis_structure.png",
+         "lewis_structures/nitrogen_trifluoride_lewis_structure.png",
+         "lewis_structures/dihydrogen_lewis_structure.png",
+         "lewis_structures/water_lewis_structure.png",
+         "lewis_structures/methane_lewis_structure.png",
+         "lewis_structures/hydrogen_fluoride_lewis_structure.png",
+         "lewis_structures/dioxygen_lewis_structure.png",
+         "lewis_structures/carbon_dioxide_lewis_structure.png",
+         "lewis_structures/oxygen_difluoride_lewis_structure.png",
+         "lewis_structures/dicarbon_lewis_structure.png",
+         "lewis_structures/carbon_tetrafluoride_lewis_structure.png",
+         "lewis_structures/difluorine_lewis_structure.png"
+         ]
