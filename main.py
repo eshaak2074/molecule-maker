@@ -1,5 +1,4 @@
 from drafter import *
-from bakery import assert_equal
 from lewis_structures import *
 from three_d_structures import *
 from dataclasses import dataclass
@@ -70,13 +69,13 @@ def determine_valence_electrons(element: str) -> int:
     """
     if element == "Nitrogen":
         return 5
-    if element == "Hydrogen":
+    elif element == "Hydrogen":
         return 1
-    if element == "Oxygen":
+    elif element == "Oxygen":
         return 6
-    if element == "Fluorine":
+    elif element == "Fluorine":
         return 7
-    if element == "Carbon":
+    else:
         return 4
     
 assert_equal(determine_valence_electrons("Nitrogen"), 5)
@@ -105,7 +104,7 @@ def determine_molecule(element: str, element_two: str) -> str:
             return "NCN (Cyanonitrene Radical)"
         if element_two == "F":
             return "NF₃ (Nitrogen Trifluoride)"
-    elif element == "H":
+    if element == "H":
         if element_two == "N":
             return "NH₃ (Ammonia)"
         if element_two == "H":
@@ -116,7 +115,7 @@ def determine_molecule(element: str, element_two: str) -> str:
             return "CH₄ (Methane)"
         if element_two == "F":
             return "HF (Hydrogen Fluoride)"
-    elif element == "O":
+    if element == "O":
         if element_two == "N":
             return "NO (Nitric Oxide)"
         if element_two == "H":
@@ -127,7 +126,7 @@ def determine_molecule(element: str, element_two: str) -> str:
             return "CO₂ (Carbon Dioxide)"
         if element_two == "F":
             return "OF₂ (Oxygen Difluoride)"
-    elif element == "C":
+    if element == "C":
         if element_two == "N":
             return "NCN (Cyanonitrene Radical)"
         if element_two == "H":
@@ -138,7 +137,7 @@ def determine_molecule(element: str, element_two: str) -> str:
             return "C₂ (Dicarbon)"
         if element_two == "F":
             return "CF₄ (Carbon Tetrafluoride)"
-    elif element == "F":
+    if element == "F":
         if element_two == "N":
             return "NF₃ (Nitrogen Trifluoride)"
         if element_two == "H":
@@ -149,6 +148,7 @@ def determine_molecule(element: str, element_two: str) -> str:
             return "CF₄ (Carbon Tetrafluoride)"
         if element_two == "F":
             return "F₂ (Difluorine)"
+    return ""
 
 assert_equal(determine_molecule("H", "H"), "H₂ (Dihydrogen)")
 assert_equal(determine_molecule("N", "F"), "NF₃ (Nitrogen Trifluoride)")
@@ -166,34 +166,35 @@ def determine_molecule_index(molecule: str) -> int:
     """
     if molecule == "N₂ (Dinitrogen)":
         return 0
-    elif molecule == "NH₃ (Ammonia)":
+    if molecule == "NH₃ (Ammonia)":
         return 1
-    elif molecule == "NO (Nitric Oxide)":
+    if molecule == "NO (Nitric Oxide)":
         return 2
-    elif molecule == "NCN (Cyanonitrene Radical)":
+    if molecule == "NCN (Cyanonitrene Radical)":
         return 3
-    elif molecule == "NF₃ (Nitrogen Trifluoride)":
+    if molecule == "NF₃ (Nitrogen Trifluoride)":
         return 4
-    elif molecule == "H₂ (Dihydrogen)":
+    if molecule == "H₂ (Dihydrogen)":
         return 5
-    elif molecule == "H₂O (Water)":
+    if molecule == "H₂O (Water)":
         return 6
-    elif molecule == "CH₄ (Methane)":
+    if molecule == "CH₄ (Methane)":
         return 7
-    elif molecule == "HF (Hydrogen Fluoride)":
+    if molecule == "HF (Hydrogen Fluoride)":
         return 8
-    elif molecule == "O₂ (Dioxygen)":
+    if molecule == "O₂ (Dioxygen)":
         return 9
-    elif molecule == "CO₂ (Carbon Dioxide)":
+    if molecule == "CO₂ (Carbon Dioxide)":
         return 10
-    elif molecule == "OF₂ (Oxygen Difluoride)":
+    if molecule == "OF₂ (Oxygen Difluoride)":
         return 11
-    elif molecule == "C₂ (Dicarbon)":
+    if molecule == "C₂ (Dicarbon)":
         return 12
-    elif molecule == "CF₄ (Carbon Tetrafluoride)":
+    if molecule == "CF₄ (Carbon Tetrafluoride)":
         return 13
-    elif molecule == "F₂ (Difluorine)":
+    if molecule == "F₂ (Difluorine)":
         return 14
+    return 15
 
 assert_equal(determine_molecule_index("CH₄ (Methane)"), 7)
 assert_equal(determine_molecule_index("C₂ (Dicarbon)"), 12)
@@ -211,34 +212,35 @@ def determine_total_valence_electrons(molecule: str) -> int:
     """
     if molecule == "N₂ (Dinitrogen)":
         return 10
-    elif molecule == "NH₃ (Ammonia)":
+    if molecule == "NH₃ (Ammonia)":
         return 8
-    elif molecule == "NO (Nitric Oxide)":
+    if molecule == "NO (Nitric Oxide)":
         return 11
-    elif molecule == "NCN (Cyanonitrene Radical)":
+    if molecule == "NCN (Cyanonitrene Radical)":
         return 14
-    elif molecule == "NF₃ (Nitrogen Trifluoride)":
+    if molecule == "NF₃ (Nitrogen Trifluoride)":
         return 26
-    elif molecule == "H₂ (Dihydrogen)":
+    if molecule == "H₂ (Dihydrogen)":
         return 2
-    elif molecule == "H₂O (Water)":
+    if molecule == "H₂O (Water)":
         return 8
-    elif molecule == "CH₄ (Methane)":
+    if molecule == "CH₄ (Methane)":
         return 8
-    elif molecule == "HF (Hydrogen Fluoride)":
+    if molecule == "HF (Hydrogen Fluoride)":
         return 8
-    elif molecule == "O₂ (Dioxygen)":
+    if molecule == "O₂ (Dioxygen)":
         return 12
-    elif molecule == "CO₂ (Carbon Dioxide)":
+    if molecule == "CO₂ (Carbon Dioxide)":
         return 16
-    elif molecule == "OF₂ (Oxygen Difluoride)":
+    if molecule == "OF₂ (Oxygen Difluoride)":
         return 20
-    elif molecule == "C₂ (Dicarbon)":
+    if molecule == "C₂ (Dicarbon)":
         return 8
-    elif molecule == "CF₄ (Carbon Tetrafluoride)":
+    if molecule == "CF₄ (Carbon Tetrafluoride)":
         return 32
-    elif molecule == "F₂ (Difluorine)":
+    if molecule == "F₂ (Difluorine)":
         return 14
+    return 0
     
 assert_equal(determine_total_valence_electrons("H₂O (Water)"), 8)
 assert_equal(determine_total_valence_electrons("CF₄ (Carbon Tetrafluoride)"), 32)
@@ -320,8 +322,8 @@ def show_history (state: State, show_structures: bool) -> Page:
         structures = []
         total = 0
         for molecule in state.history:
-            index = determine_molecule_index(molecule.molecule_symbol_name)
-            structure = Image(three_d[index], 500)
+            index_num = determine_molecule_index(molecule.molecule_symbol_name)
+            structure = Image(three_d[index_num], 500)
             structures.append(structure)
             total = total + 1
         return_page = []
@@ -438,10 +440,10 @@ def show_lewis_structure(state: State) -> Page:
         A Page showing the image of the lewis structure of the molecule created
     """
     molecule = state.bonded.molecule_symbol_name
-    index = determine_molecule_index(molecule)
+    index_num = determine_molecule_index(molecule)
     return Page(state, [
             Header("This is the Lewis Structure of " + state.bonded.molecule_symbol_name),
-            Image(lewis[index], 500),
+            Image(lewis[index_num], 500),
             "\n\n",
             Button("Show Information", "show_information"),
             Button("Show 3D Structure", "show_three_d"),
@@ -462,10 +464,10 @@ def show_three_d(state: State) -> Page:
         A Page showing the image of the 3D structure of the molecule created
     """
     molecule = state.bonded.molecule_symbol_name
-    index = determine_molecule_index(molecule)
+    index_num = determine_molecule_index(molecule)
     return Page(state, [
             Header("This is the 3D Structure of " + state.bonded.molecule_symbol_name),
-            Image(three_d[index], 500),
+            Image(three_d[index_num], 500),
             "\n\n",
             Button("Return Home", "index"),
             Button("Return Back to Lewis Structure", "show_lewis_structure")
